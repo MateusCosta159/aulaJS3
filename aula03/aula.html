@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=<device-width>, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let chamadas = 0;
+
+        function hello(){
+            console.log("Hello World");
+            chamadas++;
+        }
+
+        console.info("Exemplo 1");
+        hello();
+
+        function bomDia(nome){
+            console.log(` Bom dia ${nome}`)
+            chamadas++;
+        }
+
+        console.info("Exemplo 2");
+        bomDia("Tiago");
+
+        
+        function soma(a,b){
+            return a + b
+            chamadas++;
+        }
+        console.info("Exemplo 3");
+        console.log(`2 + 5 =  ${soma(2,5)}`);
+
+        console.info("Exemplo 4");
+        let resultado = soma(5,1)
+        console.log(`5 + 1 = ${resultado}`);
+
+        console.info("Exemplo 5");
+        console.log(`Hello + word = ${soma("Hello", "World")}`)
+
+        console.info("Exemplo 6");
+        console.log(chamadas);
+
+        console.info("Exemplo 8");
+
+        /*for(let i = 0; i < 2; i++)
+            setInterval(bomDia("Alef"),5000);*/
+        
+
+        let nomes = ["Alef", "Milan", "Eduarda", "Ygor"]
+
+        function imprimeNomes(nomes){
+            for(let n of nomes){
+                console.log(n)
+            }
+        }
+        console.info("Exemplo 9");
+        imprimeNomes(nomes)
+
+        function imprimeNomesRest(...nomes){
+            for(let n of nomes){
+                console.log(n)
+            }
+        }
+        console.info("Exemplo 10");
+        imprimeNomesRest("Ygor", "Milan", "Eduardo", "Tiago", "Vitoria", "Lucas")
+
+
+        console.info("Exemplo 11");
+        let limparNomeSerasa = function(nome){
+            console.log(`Não é possivel limpar seu nome no SERASA ${nome}`);
+        }
+
+        limparNomeSerasa("Marcos");
+
+        console.info("Exemplo 12");
+
+        let somaArrow = (a, b) => {
+            //posso criar uma logica com variaveis
+            //com escopo de função
+            return a + b
+        }
+
+        let somaArrowConcise = (a,b) => a + b
+
+        console.log(`5 + 7 = ${somaArrow(5,7)}`);
+        console.log(`Arrow Concise -> 15 + 27 = ${somaArrowConcise(15,27)}`);
+
+        let quadrado = x => {
+            return x * x
+        }
+
+        let quadradoConcise = x => x * x
+
+        console.log(`Arrow -> 5 = ${quadrado}`)
+        console.log(`Arrow Concise -> ${quadradoConcise}`)
+    </script>
+</body>
+</html>

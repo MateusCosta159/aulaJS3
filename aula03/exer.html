@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=Scri, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        /*EX1
+        function soma(a,b){
+            return a + b
+        }
+        console.log(`5 + 5 = ${soma(5,5)}`)*/
+
+
+        /*EX2
+        let somaArrow = (a, b) => {
+            return a + b
+        }
+        console.log(`9 + 15 = ${somaArrow(9,15)}`)*/
+
+        /*EX3
+        function sub(a,b){
+            return a - b
+        }
+        console.log(`9 - 54 = ${sub(9,54)}`)*/
+
+        /*EX4
+        let boasVindasArrow = (nome) => {console.log(`Boas vindas ${nome}`)}
+        boasVindasArrow('Maria')*/
+
+        /*EX5
+        function maiorMenor(a,b){
+          if(a > b){
+            return a
+          }
+          return b
+          
+        }
+        console.log(maior(6,10))*/
+
+        /*EX6
+        function concatenar(a,b){
+            return a + b
+        }
+        console.log(`${concatenar('Mateus', 'Costa')}`)*/
+
+        /*EX7
+        let parImparArrow = (a) => {
+            if(a % 2 == 0){
+                return a 
+            }else{
+                return false
+            }
+        }
+        console.log(`É par ${parImparArrow(6)}`)*/
+
+        /*EX8
+        function inverter(a){
+            let stringInvertida = ''
+            for(let i = a.length - 1; i >=0; i--){
+                stringInvertida += a[i]
+            }
+            console.log(stringInvertida)
+        }
+
+        inverter("Mateus")*/
+
+        
+
+        function maiorRest(...numeros){
+
+            let maior = numeros[0]
+            for(let i = 1; i >= numeros.length; i++){
+                
+
+                if(numeros[i] > maior){
+                    maior = numeros[i]
+                }
+            }
+            return maior
+        }
+         maiorRest(1,3,5,4,2,55,98)
+
+        
+
+
+    </script>
+</body>
+</html>
