@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+
+        let nomes = ["Alef", "Igor", "Ygor","Luiz Henrique", "Joao", "Camila",  "Luiz Gustavo"]
+
+
+        console.info("Exemplo Find")
+        console.log(nomes.find(n => n.includes("Luiz")))
+
+
+        console.info("Exemplo Filter")
+        console.log(nomes.filter(n => n.includes("Luiz")))
+
+        console.info("Exemplo Filter 2")
+        console.log(nomes.filter(n => n.includes("Vitória")))
+
+        let numeros = [19, 8, 9, 21, 3, 69, 22, 7, 17]
+        console.info("Exercicio 1")
+        console.log(numeros.find(x => x > 21))
+
+        console.info("Exercicio 2")
+        console.log(numeros.filter(x => x > 21))
+
+        console.log("Exemplo Map")
+        console.log(numeros.map(x => x*x*x))
+
+        let pessoas = [{nome: 'Lucas', idade: 19},
+                       {nome: 'Jeniffer', idade: 20},
+                       {nome: 'Camila', idade: 20},
+                       {nome: 'Joice', idade: 34}]
+                       
+
+        console.info("Exercicios 3")
+        console.log(pessoas.map(x => x.idade))
+
+        console.info("Retorne um Array mostrando verdadeoro ou falso")
+        console.log(pessoas.map(p => p.nome[0] ===  'J'))
+
+        console.log("Foreach")
+        pessoas.forEach(p => console.log(`${p.nome} tem ${p.idade} anos`))
+
+        console.info("Reduce")
+        console.log(numeros.reduce((acumulador, n) => acumulador + n, 0))
+
+        console.info("Funcao dentro de funcao")
+
+        function doubler(callback){
+            callback();
+            callback();
+        }
+
+        /*doubler.(() => console.log("Quase Intervalo"));*/
+
+
+        /*EX1
+        let numbers = [1 , 2 , 3 , 4 , 5];
+        console.log(numbers.map(x => x * 2))
+        */
+        
+        /*EX2
+        let numbers = [1 , 2 , 3 , 4 , 5 , 6 , 7 , 8 , 9];
+        console.log(numbers.filter(n => n % 2 === 0 ))
+        */
+
+        /*EX3
+        let numbers = [5 , 8 , 12 , 3 , 20];
+        console.log(numbers.find(n => n > 10))
+        */
+
+        /*EX4
+        let fruits = [" apple ", " banana ", " orange "];
+        console.log(fruits.map(f => f.toUpperCase(fruits)))
+        */
+
+        /*EX5
+        let names = ["John", "Michael", "Sarah", "Robert", "Jane"];
+        console.log(names.filter(n => n.length > 5))
+        */
+
+        /*EX6
+        let numbers = [5 , 10 , 15 , 20];
+        console.log(numbers.reduce((acumulador, n) => acumulador + n, 0))
+        */
+
+        /*EX7
+        let products = [
+        { name : " Shoes ", price : 60 } ,
+        { name : "Hat", price : 30 } ,
+        { name : " Watch ", price : 80 }];
+        console.log(products.find(p => p.price > 50))
+        */
+
+        /*EX8
+        let numbers = [3 , 6 , 8 , 12 , 15 , 17 , 18];
+        console.log(numbers.filter(n => n % 3 === 0))
+        */
+
+        /*E9
+        let people = [
+        { name : " Alice ", age: 25 } ,
+        { name : "Bob", age: 30 } ,
+        { name : " Charlie ", age: 35 }];
+        console.log(people.map(p => p.name))
+        */
+
+        
+        /*EX10
+        let numbers = [5 , 9 , 3 , 12 , 6, 15];
+        console.log(numbers.reduce((acc, n) => (acc > n ? acc:n),0))
+        */
+
+
+        let products = [
+        { name : " Book ", price : 10 } ,
+        { name : "Pen", price : 5 } ,
+        { name : " Notebook ", price : 25 } ,
+        { name : " Backpack ", price : 50 }];
+        console.log(products.reduce((acc, p) => p.price > 20 ? acc + p: p),0)
+    
+
+    </script>
+</body>
+</html>
